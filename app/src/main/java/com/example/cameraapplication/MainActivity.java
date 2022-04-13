@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 mPreview.refreshCamera(mCamera);
                    mCamera.takePicture(null, null, mPicture);
             }
+
         });
 
         switchCamera = findViewById(R.id.btnSwitch);
