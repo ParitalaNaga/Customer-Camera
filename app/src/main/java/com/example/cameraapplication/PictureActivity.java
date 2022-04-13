@@ -62,8 +62,6 @@ public class PictureActivity extends AppCompatActivity {
     String nameDb = "image", responseStr, authTok = "";
     private AlertDialog dialog;
     private static final String IMAGE_DIRECTORY = "/CustomImage/";
-    private mySqliteDbHandler mySqliteDbHandler;
-    private SQLiteDatabase sqLiteDatabase;
     File mypath;
     private static final String IMGUR_CLIENT_ID = "...";
     private static final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
@@ -80,7 +78,6 @@ public class PictureActivity extends AppCompatActivity {
         imageView = findViewById(R.id.img);
         button = findViewById(R.id.button);
         imageView.setImageBitmap(MainActivity.bitmap);
-        mySqliteDbHandler = new mySqliteDbHandler(this);
         // localstorageImage(MainActivity.bitmap);
         saveImage(MainActivity.bitmap);
 
@@ -115,6 +112,7 @@ public class PictureActivity extends AppCompatActivity {
     }
 
 
+/*
     private void localstorageImage(Bitmap bitmap) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, bytes);
@@ -131,6 +129,7 @@ public class PictureActivity extends AppCompatActivity {
         }
 
     }
+*/
 
     private void setView() {
         button.setOnClickListener(new View.OnClickListener() {
